@@ -20,11 +20,11 @@ class TaskManager:
         self.save_tasks()
 
     def view_tasks(self):
-        for index, task in enumerate(self.tasks, start=10):
+        for index, task in enumerate(self.tasks, start=1):
             print(f"Task {index}: {task}")
 
     def delete_task(self, index):
         if self.tasks:
-            self.tasks.pop(0)
+            self.tasks.pop(index - 1)
             self.save_tasks()
 

@@ -28,3 +28,11 @@ class TaskManager:
             self.tasks.pop(index)
             self.save_tasks()
 
+    def edit_task(self, index, new_description):
+        if 0 <= index < len(self.tasks):
+            self.tasks[index] = new_description
+            self.save_tasks()
+            print(f"Task {index + 1} updated successfully.")
+        else:
+            print("Error: Task index out of range.")
+

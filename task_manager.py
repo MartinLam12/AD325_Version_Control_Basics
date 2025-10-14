@@ -25,7 +25,7 @@ class TaskManager:
 
     def delete_task(self, index):
         if self.tasks:
-            self.tasks.pop(index) # Adjusted to correctly delete the task at the given index
+            self.tasks.pop(0) 
             self.save_tasks()
         
     def complete_task(self, index):
